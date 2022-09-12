@@ -4,7 +4,11 @@
 // ---------------------
 
 // Put your answer below -------------------------
+function myFunction(str, i) {
+  let myArr = str.repeat(i);
 
+  console.log(myArr);
+}
 // -----------------------------------------------
 
 // ---------------------
@@ -13,7 +17,11 @@
 // ---------------------
 
 // Put your answer below -------------------------
-
+function reverseArr(array) {
+  let array = [1, 2, 3];
+  let newArray = array.slice().reverse();
+  console.log(newArray);
+}
 // -----------------------------------------------
 
 // ---------------------
@@ -21,7 +29,11 @@
 // ---------------------
 
 // Put your answer below -------------------------
-
+function removeFalsy(arr) {
+  let arr = [2, 6, undefined, NaN, 8, 10];
+  let filtered = arr.filter(Boolean);
+  console.log(filtered);
+}
 // -----------------------------------------------
 
 // ---------------------
@@ -31,6 +43,28 @@
 // ---------------------
 
 // Put your answer below -------------------------
+const myArray = [
+  ["name", "Charlie"],
+  ["color", "brown"],
+  ["age", 10],
+];
+
+let myObj = myArray.reduce(function (object, ele) {
+  object[ele[0]] = ele[1];
+  return object;
+}, {});
+
+console.log(myObj);
+
+// (arrs) => {
+//     const obj = {
+
+//     };
+
+//     for(let i = 0 ; i < arrs.length; i++) {
+//         obj[arrs[i][0]] = arrs[i][1];
+//     }
+// }
 
 // -----------------------------------------------
 
@@ -40,7 +74,11 @@
 // ---------------------
 
 // Put your answer below -------------------------
-
+function removeDuplicates(chars) {
+  let chars = [1, 2, 3, 4, 5, 4, 3];
+  let uniqueChars = [...new Set(chars)];
+  console.log(uniqueChars);
+}
 // -----------------------------------------------
 
 // ---------------------
@@ -52,7 +90,24 @@
 // ---------------------
 
 // Put your answer below -------------------------
+function areIdentical(arr1, arr2) {
+  let firstArr = arr1.length;
+  let scndArr = arr2.length;
+  if (firstArr != scndArr) {
+    return false;
+  }
 
+  arr1.sort();
+  arr2.sort();
+
+  for (let i = 0; i < firstArr; i++) {
+    if (arr1[i] != arr2[i]) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
