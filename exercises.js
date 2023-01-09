@@ -77,9 +77,8 @@ console.log(myObj);
 
 // Put your answer below -------------------------
 function removeDuplicates(chars) {
-  let chars = [1, 2, 3, 4, 5, 4, 3];
   let uniqueChars = [...new Set(chars)];
-  console.log(uniqueChars);
+  return uniqueChars;
 }
 // -----------------------------------------------
 
@@ -95,20 +94,17 @@ function removeDuplicates(chars) {
 function areIdentical(arr1, arr2) {
   let firstArr = arr1.length;
   let scndArr = arr2.length;
-  if (firstArr != scndArr) {
+  if (firstArr !== scndArr) {
     return false;
   }
-
   arr1.sort();
   arr2.sort();
-
   for (let i = 0; i < firstArr; i++) {
-    if (arr1[i] != arr2[i]) {
+    if (arr1[i] !== arr2[i]) {
       return false;
-    } else {
-      return true;
     }
   }
+  return true;
 }
 // -----------------------------------------------
 
