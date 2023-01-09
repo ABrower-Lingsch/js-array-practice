@@ -5,9 +5,13 @@
 
 // Put your answer below -------------------------
 function myFunction(str, i) {
-  let myArr = str.repeat(i);
+  let myArr = [];
 
-  console.log(myArr);
+  for (let j = 0; j < i; j++) {
+    myArr = myArr.concat(str);
+  }
+
+  return myArr;
 }
 // -----------------------------------------------
 
@@ -18,9 +22,8 @@ function myFunction(str, i) {
 
 // Put your answer below -------------------------
 function reverseArr(array) {
-  let array = [1, 2, 3];
   let newArray = array.slice().reverse();
-  console.log(newArray);
+  return newArray;
 }
 // -----------------------------------------------
 
@@ -30,9 +33,8 @@ function reverseArr(array) {
 
 // Put your answer below -------------------------
 function removeFalsy(arr) {
-  let arr = [2, 6, undefined, NaN, 8, 10];
   let filtered = arr.filter(Boolean);
-  console.log(filtered);
+  return filtered;
 }
 // -----------------------------------------------
 
